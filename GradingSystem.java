@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class Student {
-    // 1. Encapsulation: वेरिएबल्स को private किया गया
+    
     private String name;
     private int[] marks;
     private double average;
@@ -47,20 +47,20 @@ class Student {
             System.out.print(m + " ");
         }
 
-        // %.2f से एवरेज डेसिमल के बाद सिर्फ 2 अंकों तक दिखेगा (जैसे 85.25)
+
         System.out.printf("\nAverage: %.2f\n", average); 
         System.out.println("Grade: " + grade);
         System.out.println("--------------------------\n");
     }
 }
 
-// क्लास का नाम 'that' से बदलकर 'GradingSystem' (Capital Letter) किया गया
+
 public class GradingSystem {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         char choice;
 
-        // 3. Loop लगाया गया ताकि एक से ज़्यादा छात्रों का डेटा प्रोसेस हो सके
+        
         do {
             System.out.print("Enter Student Name: ");
             String name = sc.nextLine();
@@ -72,14 +72,15 @@ public class GradingSystem {
 
             System.out.println("Enter marks (0 to 100):");
             for (int i = 0; i < n; i++) {
-                // 2. Input Validation: जब तक सही मार्क्स न मिलें, लूप चलता रहेगा
+                // 2. Input Validation
+
                 while (true) {
                     System.out.print("Subject " + (i + 1) + ": ");
                     int inputMark = sc.nextInt();
                     
                     if (inputMark >= 0 && inputMark <= 100) {
                         marks[i] = inputMark;
-                        break; // सह
+                        break; 
                     } else {
                         System.out.println("Invalid Marks! Please enter marks between 0 and 100.");
                     }
